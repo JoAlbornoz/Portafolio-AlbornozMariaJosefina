@@ -28,7 +28,24 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({
+      "radius": 60,
+      "space": -10,
+      "outerStrokeGradient": true,
+      "outerStrokeWidth": 10,
+      "innerStrokeWidth": 10,
+      "animateTitle": false,
+      "animationDuration": 1000,
+      "showUnits": false,
+      "showImage": true,
+      "imageHeight": 105,
+      "imageWidth": 105,
+      "innerStrokeColor": "#e7e8ea",
+      "backgroundPadding": -19,
+      "backgroundOpacity": 0.3,
+      "startFromZero": false,
+      "lazy": true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
