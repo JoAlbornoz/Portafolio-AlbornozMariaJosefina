@@ -1,4 +1,4 @@
-package com.portfolio.albornozmj.mja;
+package com.portfolio.mja;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
