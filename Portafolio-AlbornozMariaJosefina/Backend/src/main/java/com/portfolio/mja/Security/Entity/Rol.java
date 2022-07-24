@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfolio.mja.Security.Entity;
 
 import com.portfolio.mja.Security.Enums.RolNombre;
@@ -15,6 +11,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Rol {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -44,6 +41,5 @@ public class Rol {
     public void setRolNombre(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
-    
-    
+
 }

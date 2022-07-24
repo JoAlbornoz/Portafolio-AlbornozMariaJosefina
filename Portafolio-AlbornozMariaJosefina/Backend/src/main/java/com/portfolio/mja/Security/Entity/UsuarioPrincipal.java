@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfolio.mja.Security.Entity;
 
 import java.util.Collection;
@@ -11,10 +7,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-/**
- *
- * @author josef
- */
 public class UsuarioPrincipal implements UserDetails {
 
     private String nombre;
@@ -32,8 +24,11 @@ public class UsuarioPrincipal implements UserDetails {
     }
 
     public static UsuarioPrincipal build(Usuario usuario) {
-        List<GrantedAuthority> authorities = usuario.getRoles().stream().map(rol -> new SimpleGrantedAuthority(rol.getRolNombre().name())).collect(Collectors.toList());
-        return new UsuarioPrincipal(usuario.getNombre(), usuario.getNombreUsuario(), usuario.getEmail(), usuario.getPassword(), authorities);
+        List<GrantedAuthority> authorities = usuario.getRoles().stream()
+                .map(rol -> new SimpleGrantedAuthority(rol.getRolNombre().name())).collect(Collectors
+                .toList());
+        return new UsuarioPrincipal(usuario.getNombre(), usuario.getNombreUsuario(), usuario.getEmail(),
+                usuario.getPassword(), authorities);
     }
 
     @Override
