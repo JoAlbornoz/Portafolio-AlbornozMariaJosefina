@@ -31,15 +31,13 @@
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							
 							</div>
-							    <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control input_user" [(ngModel)]="nombreUsuario" required />
-								<label class="form-label" for="nombreUsuario"> Usuario </label>
+							    <input type="text" id="nombreUsuario" for="nombreUsuario" name="nombreUsuario" class="form-control input_user" [(ngModel)]="nombreUsuario" required />
 						    </div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							    <input type="password" id="password" name="password" class="form-control input_pass" value="" [(ngModel)]="password" required />
-								<label class="form-label" for="password"> Contraseña </label>
+							    <input type="password" id="password" for="password" name="password" class="form-control input_pass" value="" [(ngModel)]="password" required />
 						    </div>
 							<div class="d-flex justify-content-center mt-3 login_container">
 							<button type="submit" name="button" class="btn login_btn">Ingresar</button>
