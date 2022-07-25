@@ -1,8 +1,11 @@
 img{
-    width: 100%;
+    width: 95%;
     height: 400px;
+    border-radius: 30px;
+    margin: 15px
 }
 
 div{
     text-align: center;
+    background-color: rgb(195, 195, 238);
 }

@@ -12,12 +12,20 @@ a{
     padding: 0.5em;
 }
 
+i{
+    color: white;
+}
+
 #logoAP{
     width: 150px;
 }
-img{
-    width: 50px;
+
+.btn{
+    margin-bottom: 1em;
+    margin-left: 0.5em;
+
 }
+
 
 /*Celu*/
 @media(max-width: 575px){
