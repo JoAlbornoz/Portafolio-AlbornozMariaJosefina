@@ -1,30 +1,30 @@
 <div class="row">
-    <h1> Educación </h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <ul>
-            <li>
-                <h1>Estudio</h1> - <h3>(years)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem obcaecati, cumque, officia sint nihil vel maxime amet ducimus numquam beatae fugit delectus. Ullam similique impedit, excepturi suscipit unde odit dolorum. 
-            </p>
-        </ul>
-
-        <ul>
-            <li>
-                <h1>Curso N1</h1> - <h3>(years)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem obcaecati, cumque, officia sint nihil vel maxime amet ducimus numquam beatae fugit delectus. Ullam similique impedit, excepturi suscipit unde odit dolorum. 
-            </p>
-        </ul>
-
-        <ul>
-            <li>
-                <h1>Curso N2</h1> - <h3>(years)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem obcaecati, cumque, officia sint nihil vel maxime amet ducimus numquam beatae fugit delectus. Ullam similique impedit, excepturi suscipit unde odit dolorum. 
-            </p>
-        </ul>
-
+    <h1>Educacion</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-outline-dark" routerLink="/educacion"  *ngIf="isLogged">
+            <i class="bi bi-plus-lg" style="font-size: 1.5rem;"></i></button>
     </div>
+
+    <div class="col lg 1"> </div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h2>{{Educacion.nombreE}}</h2>
+                    </td>
+                    {{Educacion.descripcionE}}
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-outline-success" routerLink="/editexp/{{Educacion.id}}">
+                            <i class="bi bi-pencil" style="font-size: 1.8rem;"></i></button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-outline-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash3" style="font-size: 1.8rem;"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
